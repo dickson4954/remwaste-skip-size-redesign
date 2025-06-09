@@ -55,7 +55,7 @@ const SkipCard = ({ skip, isSelected, onSelect }) => {
             className={`select-skip-btn ${isSelected ? 'active' : ''}`}
             type="button"
             onClick={(e) => {
-              e.stopPropagation(); // Prevent parent click
+              e.stopPropagation(); 
               onSelect();
             }}
             aria-pressed={isSelected}

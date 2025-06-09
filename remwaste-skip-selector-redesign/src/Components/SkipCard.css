@@ -10,25 +10,20 @@
   overflow: hidden;
   position: relative;
 }
-
-/* Isolate the animation here */
 .skip-card-float {
   animation: floatCard 4s ease-in-out infinite;
   display: flex;
   flex-direction: column;
   height: 100%;
 }
-
 .skip-card-wrapper:hover .skip-card-float {
   transform: translateY(-6px);
   box-shadow: 0 0 16px rgba(147, 51, 234, 0.7);
 }
-
 .skip-card-wrapper.selected {
   border: 2px solid #a855f7;
   box-shadow: 0 0 20px rgba(168, 85, 247, 0.8);
 }
-
 @keyframes floatCard {
   0%, 100% {
     transform: translateY(0);
