@@ -1,0 +1,126 @@
+.skip-selection-page {
+  padding: 40px 20px 180px;
+  max-width: 1200px;
+  margin: auto;
+  background-color: #f9fafb;
+  min-height: 100vh;
+  color: #111827;
+  font-family: 'Inter', sans-serif;
+}
+.skip-selection-page header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.skip-selection-page header h1 {
+  font-size: 2.5rem;
+  color: #1e293b;
+  font-weight: 700;
+}
+.skip-selection-page header p {
+  font-size: 1rem;
+  color: #64748b;
+  margin-top: 8px;
+}
+.skip-list {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-bottom: 48px;
+}
+.skip-footer-bar {
+  position: fixed;
+  bottom: 72px;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  box-shadow: 0 -1px 10px rgba(0, 0, 0, 0.05);
+  padding: 16px 24px;
+  font-size: 1rem;
+  color: #1f2937;
+  display: flex;
+  justify-content: space-between;
+  z-index: 50;
+  flex-wrap: wrap;
+}
+.action-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 24px;
+  background-color: #f3f4f6;
+  border-top: 1px solid #e5e7eb;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  z-index: 60;
+  flex-wrap: wrap;
+}
+.back-btn,
+.next-btn {
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  transition: all 0.3s ease;
+  min-width: 120px;
+}
+.back-btn {
+  background: transparent;
+  border: 2px solid #9333ea;
+  color: #9333ea;
+}
+.back-btn:hover {
+  background: #9333ea;
+  color: white;
+}
+.next-btn {
+  background: #9333ea;
+  color: white;
+  box-shadow: 0 0 10px rgba(147, 51, 234, 0.3);
+}
+.next-btn:disabled {
+  background: #d1d5db;
+  color: #9ca3af;
+  box-shadow: none;
+  cursor: not-allowed;
+}
+.next-btn:not(:disabled):hover {
+  background: #7e22ce;
+}
+@media (max-width: 768px) {
+  .skip-selection-page header h1 {
+    font-size: 2rem;
+  }
+  .skip-selection-page header p {
+    font-size: 0.95rem;
+  }
+  .skip-footer-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .back-btn,
+  .next-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  .skip-list {
+    grid-template-columns: 1fr;
+  }
+  .skip-selection-page {
+    padding: 24px 12px 160px;
+  }
+  .skip-footer-bar,
+  .action-buttons {
+    padding: 12px;
+  }
+}
